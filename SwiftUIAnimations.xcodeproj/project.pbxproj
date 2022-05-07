@@ -14,6 +14,7 @@
 		340BEABA28269CAA008C8623 /* SwiftUIAnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340BEAB928269CAA008C8623 /* SwiftUIAnimationsTests.swift */; };
 		340BEAC428269CAB008C8623 /* SwiftUIAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340BEAC328269CAB008C8623 /* SwiftUIAnimationsUITests.swift */; };
 		340BEAC628269CAB008C8623 /* SwiftUIAnimationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340BEAC528269CAB008C8623 /* SwiftUIAnimationsUITestsLaunchTests.swift */; };
+		340BEAD428269D0C008C8623 /* RocketShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340BEAD328269D0C008C8623 /* RocketShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		340BEABF28269CAB008C8623 /* SwiftUIAnimationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIAnimationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		340BEAC328269CAB008C8623 /* SwiftUIAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsUITests.swift; sourceTree = "<group>"; };
 		340BEAC528269CAB008C8623 /* SwiftUIAnimationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		340BEAD328269D0C008C8623 /* RocketShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		340BEAA728269CA8008C8623 /* SwiftUIAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				340BEAD228269CBF008C8623 /* Shapes */,
 				340BEAA828269CA8008C8623 /* SwiftUIAnimationsApp.swift */,
 				340BEAAA28269CA8008C8623 /* ContentView.swift */,
 				340BEAAC28269CAA008C8623 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				340BEAC528269CAB008C8623 /* SwiftUIAnimationsUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIAnimationsUITests;
+			sourceTree = "<group>";
+		};
+		340BEAD228269CBF008C8623 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				340BEAD328269D0C008C8623 /* RocketShape.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340BEAD428269D0C008C8623 /* RocketShape.swift in Sources */,
 				340BEAAB28269CA8008C8623 /* ContentView.swift in Sources */,
 				340BEAA928269CA8008C8623 /* SwiftUIAnimationsApp.swift in Sources */,
 			);

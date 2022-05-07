@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var transition = AnyTransition.identity
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            RocketShape()
+                .transition(transition)
+            Button("Launch"){
+                transition = AnyTransition.move(edge: .bottom)
+            }
+        }
     }
 }
 
