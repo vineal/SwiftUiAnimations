@@ -12,13 +12,13 @@ struct ContentView: View {
     var body: some View {
         VStack{
             RocketShape()
-                .offset(x: 0, y: moveY ? 0: -250)
+                .offset(x: 0, y: moveY ? 0: -800)
             Button {
                 withAnimation(SwiftUI.Animation.spring(response: 0.75, dampingFraction: 0.5, blendDuration: 3)){
                     self.moveY.toggle()
                 }
             } label: {
-                Text(moveY ? "Launch" : "Land")
+                Text(moveY ? "Launch Rocket" : "Retrieve")
             }
             
         }
