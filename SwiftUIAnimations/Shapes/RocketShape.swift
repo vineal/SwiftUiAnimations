@@ -12,13 +12,31 @@ struct RocketShape: View {
     var body: some View {
         ZStack{
             RocketBody()
+                .stroke(lineWidth: 5)
+                .foregroundColor(.white)
+            RocketBody()
                 .fill(
                     LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom)
                 )
+            Circle()
+                .stroke(lineWidth: 5)
+                .frame(width: 30, height: 30)
+                .position(x: 200, y: 350)
+                .foregroundColor(.white)
+            Circle()
+                .fill(
+                    LinearGradient(gradient: Gradient(colors: [.white, .gray]), startPoint: .bottom, endPoint: .top)
+                )
+                .frame(width: 30, height: 30)
+                .position(x: 200, y: 350)
+            RocketFlames()
+                .stroke(lineWidth: 5)
+                .foregroundColor(.white)
             RocketFlames()
                 .fill(
                     LinearGradient(gradient: Gradient(colors: [.black,.blue.opacity(0.75),.orange,.red]), startPoint: .top, endPoint: .bottom)
                 )
+                
         }
     }
 }
