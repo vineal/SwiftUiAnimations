@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var transition = AnyTransition.identity
+    @State var moveY = true
     var body: some View {
-        VStack {
+        VStack{
             RocketShape()
-                .transition(transition)
-            Button("Launch"){
-                transition = AnyTransition.move(edge: .bottom)
+                .offset(x: 0, y: moveY ? 0: -250)
+            Button {
+                withAnimation(SwiftUI.Animation.spring(response: 0.75, dampingFraction: 0.5, blendDuration: 3)){
+                    self.moveY.toggle()
+                }
+            } label: {
+                Text(moveY ? "Launch" : "Land")
             }
+            
         }
     }
 }
