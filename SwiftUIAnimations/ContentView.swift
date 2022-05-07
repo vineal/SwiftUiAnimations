@@ -30,12 +30,13 @@ struct ContentView: View {
                                 self.moveShip.toggle()
                             }
                         } label: {
-                            Text(moveShip ? "Launch Rocket" : "Retrieve Shuttle")
+                            Text(moveShip ? " Launch Rocket " : " Retrieve Shuttle ")
                                 .background(
                                     LinearGradient(gradient: Gradient(colors: [.white, .gray]), startPoint: .bottom, endPoint: .top)
                                 )
                                 .foregroundColor(.black)
                                 .font(.title2.bold())
+                                .border(Color.white, width: 1)
                                 .cornerRadius(5)
                         }
                         
