@@ -10,6 +10,8 @@ import SwiftUI
 struct BallBounceAnimation: View {
     @State var xPosition = 100.0
     @State var yPosition = 150.0
+    @State var rotated = false
+    @State var rotation = 0.0
     var body: some View {
         ZStack(){
         Circle()
@@ -19,13 +21,18 @@ struct BallBounceAnimation: View {
         TennisBall()
             .stroke(.white)
             .position(x: xPosition+95, y: yPosition+230)
-        }.onAppear {
-            withAnimation(.spring(response: 2, dampingFraction: 0.1, blendDuration: 5).repeatForever()) {
-//                let randomx = Double.random(in: 50..<100)
-//                xPosition+=randomx
+        }
+        .foregroundColor(.yellow)
+        .onTapGesture {
+            rotated.toggle()
+            rotation = rotated ? 0.0 : 180
+        }
+        .rotationEffect(.degrees(rotation))
+        .animation(.easeIn, value: rotation)
+        .onAppear {
+            withAnimation(.spring(response: 2, dampingFraction: 0.1, blendDuration: 0.1).repeatForever()) {
                 yPosition+=300
             }
-            
         }
     }
 }
